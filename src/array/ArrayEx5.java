@@ -27,3 +27,6 @@ public class ArrayEx5 {
         ArrayEx5 ex = new ArrayEx5();
     }
 }
+
+
+
