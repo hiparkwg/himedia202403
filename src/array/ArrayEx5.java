@@ -19,9 +19,6 @@ public class ArrayEx5 {
             }
             System.out.println("-".repeat(40));
         }                          
-                          
-
-
     }
     public static void main(String[] args) {
         ArrayEx5 ex = new ArrayEx5();
