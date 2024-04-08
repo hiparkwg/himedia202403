@@ -24,9 +24,9 @@ public class ArrayEx7 {
         System.out.println("-".repeat(70));
         for(int r=0 ; r<score.length; r++){
             System.out.printf("%4s %10s %6s %6s %6s %7s %7.1f\n",
-            (r+1), name[r], score[r][0], score[r][1],
-            score[r][2], score[r][3], score[r][4]
-        );
+                (r+1), name[r], score[r][0], score[r][1],
+                score[r][2], score[r][3], score[r][4]
+            );
 
         }
 
