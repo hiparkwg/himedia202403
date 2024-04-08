@@ -2,7 +2,7 @@ package array;
 
 public class ArrayEx6 {
     ArrayEx6(){
-        int[] data = {8,2,3,14,5};
+        int[] data = {8,2,3,14,50};
         int minPos=0; //최소값의 위치
         int maxPos=0; //최대값의 위치
         int meanPos=0;//중간값의 위치
