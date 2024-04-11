@@ -1,11 +1,15 @@
 package member;
 
+import java.util.*;
+
+
 public class MemberMain {
     static MemberVo[] member = new MemberVo[10];
     static int cnt=0; //입력된 데이터 건수
 
     MemberMain(){
-        MemberInput input = new MemberInput();
+        //철거예정
+        MemberInput  input  = new MemberInput();
         MemberModify modify = new MemberModify();
         MemberDelete delete = new MemberDelete();
         MemberSearch search = new MemberSearch();
@@ -20,12 +24,31 @@ public class MemberMain {
 
         MemberVo v2 = new MemberVo("a001", "kim", "busan", "010-2222-2222");
         member[1] = v2;
-        
+
         member[2] = new MemberVo("a003", "park","jeju", "010-33333-3333");
     }
 
+    // 메뉴를 입력받아 작업 진행
+    public void start(){
+        Scanner s = new Scanner(System.in);
+        boolean flag=true; //true일 때 반독, false일 때 작업중단
+        while(flag){
+            System.out.println("*** 회원관리 ***");
+            System.out.println("-".repeat(40));
+            System.out.print("1=입력, 2=수정, 3=조회, 4=삭제, 0=종료 >>>");
+            String menu = s.nextLine();
+            switch(menu){
+                case "0" : flag=false;break;
+                case "1" : new MemberInput();  break;
+                case "2" : new MemberModify(); break; 
+                case "3" : new MemberSearch(); break;
+                case "4" : new MemberDelete(); break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        new MemberMain();        
+        new MemberMain().start();        
     }
 
 }
