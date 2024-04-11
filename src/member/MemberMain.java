@@ -5,7 +5,7 @@ import java.util.*;
 
 public class MemberMain {
     static MemberVo[] member = new MemberVo[10];
-    static int cnt=3; //입력된 데이터 건수
+    static int cnt=7; //입력된 데이터 건수
 
     MemberMain(){
 
@@ -21,6 +21,10 @@ public class MemberMain {
         member[1] = v2;
 
         member[2] = new MemberVo("a003", "park","jeju", "010-33333-3333");
+        member[3] = new MemberVo("a004", "park","jeju", "010-33333-3333");
+        member[4] = new MemberVo("a005", "park","jeju", "010-33333-3333");
+        member[5] = new MemberVo("a006", "park","jeju", "010-33333-3333");
+        member[6] = new MemberVo("a007", "park","jeju", "010-33333-3333");
     }
 
     // 메뉴를 입력받아 작업 진행

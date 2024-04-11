@@ -24,7 +24,9 @@ public class MemberModify {
             System.out.printf("연락처 : %s >>>",  vo.getPhone());
             String phone = s.nextLine();
 
-            
+            if( !irum.equals("") )   vo.setIrum(irum);
+            if( !address.equals("")) vo.setAddress(address);
+            if( !phone.equals("") )  vo.setPhone(phone);
         }
     }
 }
