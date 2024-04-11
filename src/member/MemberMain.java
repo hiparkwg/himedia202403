@@ -8,11 +8,6 @@ public class MemberMain {
     static int cnt=0; //입력된 데이터 건수
 
     MemberMain(){
-        //철거예정
-        MemberInput  input  = new MemberInput();
-        MemberModify modify = new MemberModify();
-        MemberDelete delete = new MemberDelete();
-        MemberSearch search = new MemberSearch();
 
         //sample data 준비
         MemberVo v = new MemberVo();
