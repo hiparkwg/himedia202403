@@ -15,6 +15,11 @@ public class MemberVo {
         this.phone = ph;
     }
 
+    public String toString(){
+        String temp = String.format("%-10s%-10s%-15s%-15s",id, irum, address, phone);
+
+        return temp;
+    }
 
 
     //setter

@@ -20,11 +20,11 @@ public class MemberMain {
         MemberVo v2 = new MemberVo("a002", "kim", "busan", "010-2222-2222");
         member[1] = v2;
 
-        member[2] = new MemberVo("a003", "park","jeju", "010-33333-3333");
-        member[3] = new MemberVo("a004", "park","jeju", "010-33333-3333");
-        member[4] = new MemberVo("a005", "park","jeju", "010-33333-3333");
-        member[5] = new MemberVo("a006", "park","jeju", "010-33333-3333");
-        member[6] = new MemberVo("a007", "park","jeju", "010-33333-3333");
+        member[2] = new MemberVo("a003", "park","인천", "010-33333-3333");
+        member[3] = new MemberVo("a004", "park","경기도", "010-33333-3333");
+        member[4] = new MemberVo("a005", "park","제주", "010-33333-3333");
+        member[5] = new MemberVo("a006", "park","독도", "010-33333-3333");
+        member[6] = new MemberVo("a007", "park","울릉도", "010-33333-3333");
     }
 
     // 메뉴를 입력받아 작업 진행

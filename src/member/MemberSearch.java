@@ -18,12 +18,12 @@ public class MemberSearch {
                 vo.getIrum().contains(findStr)    ||
                 vo.getAddress().contains(findStr) ||
                 vo.getPhone().contains(findStr)      ){            
-                    System.out.printf("%4s", i+1);
-                    System.out.printf("%10s", vo.getId());
-                    System.out.printf("%10s", vo.getIrum());
-                    System.out.printf("%10s", vo.getAddress());
-                    System.out.printf("%15s", vo.getPhone());
-                    System.out.println();
+                    System.out.printf("%4s  ", i+1);
+                    // System.out.printf("%10s", vo.getId());
+                    // System.out.printf("%10s", vo.getIrum());
+                    // System.out.printf("%10s", vo.getAddress());
+                    // System.out.printf("%15s", vo.getPhone());
+                    System.out.println(vo);
             }
         }
 
