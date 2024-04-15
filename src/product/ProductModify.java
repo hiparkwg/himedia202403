@@ -1,3 +1,6 @@
+/* 
+ * 제품의 고유 번호를 사용한 데이터 수정
+ */
 package product;
 import java.util.*;
 public class ProductModify {
