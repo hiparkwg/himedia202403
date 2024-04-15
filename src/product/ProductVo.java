@@ -13,7 +13,7 @@ public class ProductVo {
         this.code = code;
         this.ea = ea;
         this.price = price;
-        this.amt = ea*price;
+        this.amt = ea*price;//or compute();
     }
 
     //setter
@@ -33,7 +33,7 @@ public class ProductVo {
     public void compute(){
         this.amt = this.ea*this.price; 
     }
-    public String print(){
+    public String print(){//public String toString(){}
         // 제품코드를 사용하여 제품명을 찾아 출력
         String codeName = ProductSearch.findCodeName(this.code);
         //String codeName = "냉장고";
