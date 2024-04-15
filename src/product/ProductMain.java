@@ -3,7 +3,8 @@ package product;
 import java.util.Scanner;
 
 public class ProductMain {
-    public static int cnt = 0;
+    public static int cnt = 0;//입력건수
+    public static int no = 0; //입력자료의 고유번호
     public static ProductVo[] products = 
             new ProductVo[10];
 
@@ -21,7 +22,8 @@ public class ProductMain {
         ProductMain.products[2] = new ProductVo(3, "b", 500,500);
         ProductMain.products[3] = new ProductVo(4, "c", 500,500);
         ProductMain.products[4] = new ProductVo(5, "d", 500,500);
-        ProductMain.cnt=5;
+        ProductMain.cnt = 5;//현재 입력된 데이터의 건수
+        ProductMain.no  = 6;//입력 데이터의 고유번호(항상 증가)
 
         Scanner s = new Scanner(System.in);
         boolean flag=true;
@@ -33,9 +35,9 @@ public class ProductMain {
             switch(menu){
                 case "0" : flag=false;break;
                 case "1" : new ProductInput(); break;
-                case "2" : new ProductModify(); break;
-                case "3" : new ProductSearch(); break;
-                case "4" : new ProductDelete(); break;
+                case "2" : new ProductModify().modify(); break;
+                case "3" : new ProductSearch().search(); break;
+                case "4" : new ProductDelete().delete(); break;
             }
         }
     }        
