@@ -30,7 +30,7 @@ public class ProductInput {
 
         // 입력된 정보를 사용하여 vo 생성
         ProductVo vo = 
-            new ProductVo(ProductMain.cnt+1, code, ea, price);
+            new ProductVo(ProductMain.no, code, ea, price);
 
         System.out.println("금액 : " + vo.getAmt());
 
@@ -39,6 +39,7 @@ public class ProductInput {
         if(yn.toUpperCase().equals("Y")){
             ProductMain.products[ProductMain.cnt]=vo;
             ProductMain.cnt++;
+            ProductMain.no++;
         }else{
             System.out.println("저장이 취소됨.");
         }
