@@ -6,7 +6,7 @@ package inheri;
 //인터페이스안에는 상수와 추상메서드만이 존재할 수 있음.
 interface Animal{
     String color="white";//상수화됨
-    String getColor();//추상 메서드
+    String getColor();//추상 메서드(abstract가 자동으로 추가됨)
 }
 public class InterfaceTest implements Animal{
 
