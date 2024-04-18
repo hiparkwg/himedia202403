@@ -15,6 +15,7 @@ class Member{
     public int hashCode(){
         return this.mName.hashCode() + this.phone.hashCode();
     }
+    
 
     @Override
     public boolean equals(Object obj){
