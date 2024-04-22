@@ -50,6 +50,8 @@ class CompareData implements Comparator{
             CompareData d1 = (CompareData)o1;
             CompareData d2 = (CompareData)o2;
             //r=d1.mName.compareTo(d2.mName);//이름순으로
+            r = (d1.score - d2.score)*-1; // or
+            r = d2.score - d1.score;
             
 
         }
