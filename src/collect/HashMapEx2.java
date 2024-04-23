@@ -43,8 +43,7 @@ public class HashMapEx2 {
             if(key.equals("")) break;
             if(map.containsKey(key)){
                 Integer v = map.get(key);
-                System.out.printf("아이디 : %-6s 점수 : %6d\n\n",
-                                    key, v);
+                System.out.printf("아이디 : %-6s 점수 : %6d\n\n", key, v);
             }
         }
 
