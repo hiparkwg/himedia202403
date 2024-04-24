@@ -10,9 +10,15 @@ public class RunnableEx{
         Thread t2 = new Thread(r2);
         Thread t3 = new Thread(r3);
 
+        // thread
         t1.start();
         t2.start();
         t3.start();
+        
+        // non thread
+        //r1.run();
+        //r2.run();
+        //r3.run();
     }
 
     public static void main(String[] args) {
