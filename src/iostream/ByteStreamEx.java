@@ -13,6 +13,10 @@ public class ByteStreamEx {
         os.close();
 
     }
+    /*
+     * 1) 한글깨짐에 대한 보완책이 있어야 함.
+     * 2) 마지막 바이트에 포함된 쓰레기값 제거.
+     */
     public void input() throws Exception{
         File file = new File(fileName);
         StringBuilder sb = new StringBuilder();
