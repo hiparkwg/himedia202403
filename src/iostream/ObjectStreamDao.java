@@ -169,7 +169,28 @@ public class ObjectStreamDao {
         }
 
     }
-    public void delete(){}
+    public void delete(){
+        String yn="";
+        String delId="";
+        System.out.print("삭제할 회원의 아이디 >>> ");
+        delId = s.nextLine();
+        for(Data d : list){
+            if(d.getId().equals(delId)){
+                System.out.printf("이름 : %s\n", d.getmName());
+                System.out.printf("주소 : %s\n", d.getAddr());
+                System.out.printf("연락처 : %s\n", d.getPhone());
+                System.out.printf("포인트 : %s\n", d.getPoint());
+                System.out.print("위의 데이터를 정말 삭제(y/n) ? ");
+                yn = s.nextLine();
+                if(yn.equals("y")){
+                    list.remove(d);
+                    System.out.println("자료가 삭제되었습니다.");
+                    break;
+                }
+            }
+        }
+
+    }
 
 
     public static void main(String[] args) {
