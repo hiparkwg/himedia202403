@@ -11,8 +11,9 @@ public class ObjectStreamDao {
         s = new Scanner(System.in);
 
         while(true){
-            System.out.println("Object Data CRUD");
-            System.out.print("1=입력 2=수정 3=조회 4=삭제 r=파일읽기 s=파일저장 0=종료 >>>");
+            System.out.println("[[[[ Object Data CRUD ]]]]");
+            System.out.print("CRUD[1=입력 2=수정 3=조회 4=삭제]\n");
+            System.out.print("File[r=읽기 s=저장 0=종료] \n>>> ");
             String menu = s.nextLine();
             if(menu.equals("0")) break;
             switch(menu){
