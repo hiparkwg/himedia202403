@@ -100,7 +100,7 @@ public class ObjectStreamDao {
                     list.clear();
                 }
             }
-            
+
             for(Data d : tempList){
                 list.add(d);
             }
@@ -113,14 +113,62 @@ public class ObjectStreamDao {
         }
     }
     public void search(){
+        String findStr="";
+        System.out.print("검색어를 입력하세요 >>> ");
+        findStr = s.nextLine();
         
         for(Data d : list){
-            System.out.println(d.toString());
+            if(d.getId().equals(findStr)     || d.getmName().contains(findStr) ||
+               d.getAddr().contains(findStr) || d.getPhone().contains(findStr)){
+                System.out.println(d.toString());
+            }
         }
 
+    }
+    public void update(){
+        String findId="";
+        String yn="";
+        String name="";
+        String addr="";
+        String phone="";
+        int    point=0;
+
+        System.out.print("수정할 회원의 아이디 >>> ");
+        findId = s.nextLine();
+        for(Data d : list){
+            if(d.getId().equals(findId)){
+                System.out.printf("이름 : [%s] >>> ", d.getmName());
+                name = s.nextLine();
+                name = name.equals("")? d.getmName() : name;
+
+                System.out.printf("주소 : [%s] >>> ", d.getAddr());
+                addr = s.nextLine();
+                addr = addr.equals("")? d.getAddr() : addr;
+
+                System.out.printf("연락처 : [%s] >>> ", d.getPhone());
+                phone = s.nextLine();
+                phone = phone.equals("")? d.getPhone() : phone;
+
+                System.out.printf("포인트 : [%s] >>> ", d.getPoint());
+                point = s.nextInt(); s.nextLine();
+                point = point==0? d.getPoint() : point;
+
+                System.out.print("정말 수정하시겠습니까(y/n) ? ");
+                yn = s.nextLine();
+                if(yn.equals("y")){
+                    d.setmName(name);
+                    d.setAddr(addr);
+                    d.setPhone(phone);
+                    d.setPoint(point);
+                    System.out.println("자료가 수정되었습니다.");
+                    break;
+                }else{
+                    System.out.println("수정 작업이 취소되었습니다.");
+                }
+            }
+        }
 
     }
-    public void update(){}
     public void delete(){}
 
 
